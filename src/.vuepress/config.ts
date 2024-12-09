@@ -3,8 +3,8 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/",
-
+  base: process.env.NODE_ENV === 'development' ? "/" : '/vuepress-blog/',
+  lang: 'zh-CN',
   locales: {
     "/": {
       lang: "en-US",
